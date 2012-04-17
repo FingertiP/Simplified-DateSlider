@@ -1,17 +1,15 @@
 Simplified DateSlider is a ready-to-user modification of DateSlider (https://github.com/bendemboski/DateSlider). As I found that the original package is a bit hard to integrate to my existing project, I tried to extract the necessary files and simplify their structure so that it will be easy to include. This repo follows the original DateSlider license (Apache License 2.0).
 
 
-Adding Simplified DateSlider to your project (Automatic)
---------------------------------------------------------
+### Adding Simplified DateSlider to your project (Automatic)
 if you had ruby installed on your machine, browse to Simplified DateSlider's folder. Then use the following command
-```shell
+```
   ruby install.rb [your package name] [your project path]
 ```
+
 For example, ruby install.rb com.example ~/Projects/eclipse/workspace/my_project
 
-
-Adding Simplified DateSlider to your project (Manual)
------------------------------------------------------
+### Adding Simplified DateSlider to your project (Manual)
 1. Copy the code in src folder to your src folder. If you wanted to change the package name, go ahead!
 2. Copy attrs.xml and styles.xml to your res/values folder. If you had them already, copied the content of these files and pasted into yours.
 3. Copy all files in res/drawable to your res/drawable folder.
@@ -20,8 +18,7 @@ Adding Simplified DateSlider to your project (Manual)
 6. Import your R class in those files.
 
 
-How to use it?
---------------
+### How to use it?
 See DateSlider's original repo at https://github.com/bendemboski/DateSlider.
 
 
