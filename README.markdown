@@ -1,4 +1,4 @@
-Simplified DateSlider is a ready-to-user modification of DateSlider (https://github.com/bendemboski/DateSlider). As I found that the original package is a bit hard to integrate to my existing project, I tried to extract the necessary files and simplify their structure so that it will be easy to include. This repo follows the original DateSlider license (Apache License 2.0).
+Simplified DateSlider is a ready-to-use modification of DateSlider (https://github.com/bendemboski/DateSlider). As I found that the original package is a bit hard to integrate to my existing project, I tried to extract the necessary files and simplify their structure so that it will be easy to include. This repo follows the original DateSlider license (Apache License 2.0).
 
 
 ### Adding Simplified DateSlider to your project (Automatic)
