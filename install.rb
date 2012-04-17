@@ -32,37 +32,25 @@ elsif ARGV.length == 2
   #copy layout
   FileUtils.cp_r "res/layout", "#{project_location}/res/"
 
-  #copy attrs values
-  if(File.exists? "#{project_location}/res/values/attrs.xml")
-    original_file = File.open("res/values/attrs.xml", "r")
-    chunks        = original_file.readlines[2..7]
-    target_file   = File.open("#{project_location}/res/values/attrs.xml", "r+")
-    codes         = target_file.readlines
-    codes.insert(-2, chunks.join)
-    target_file.rewind
-    target_file.write(codes.join)
-    original_file.close
-    target_file.close
-  else
-    FileUtils.cp_r "res/values/attrs.xml", "#{project_location}/res/values"
-  end
-
-  #copy styles values
-  if(File.exists? "#{project_location}/res/values/styles.xml")
-    original_file = File.open("res/values/styles.xml", "r")
-    chunks        = original_file.readlines[2..7]
-    target_file   = File.open("#{project_location}/res/values/styles.xml", "r+")
-    codes         = target_file.readlines
-    codes.insert(-2, chunks.join)
-    target_file.rewind
-    target_file.write(codes.join)
-    original_file.close
-    target_file.close
-  else
-    FileUtils.cp "res/values/styles.xml", "#{project_location}/res/values/"
+  #copy attrs/styles values
+  %w[attrs.xml styles.xml].each do |file_name|
+    if(File.exists? "#{project_location}/res/values/#{file_name}")
+      original_file = File.open("res/values/#{file_name}", "r")
+      chunks        = original_file.readlines[2..7]
+      target_file   = File.open("#{project_location}/res/values/#{file_name}", "r+")
+      codes         = target_file.readlines
+      codes.insert(-2, chunks.join)
+      target_file.rewind
+      target_file.write(codes.join)
+      original_file.close
+      target_file.close
+    else
+      FileUtils.cp_r "res/values/#{file_name}", "#{project_location}/res/values"
+    end
   end
 
   puts "Completed."
+
 else
   puts <<-END
     usage:    ruby install.rb [package_name] [project_location]
