@@ -3,9 +3,7 @@ Simplified DateSlider is a ready-to-user modification of DateSlider (https://git
 
 ### Adding Simplified DateSlider to your project (Automatic)
 if you had ruby installed on your machine, browse to Simplified DateSlider's folder. Then use the following command
-```
-  ruby install.rb [your package name] [your project path]
-```
+
 
 For example, ruby install.rb com.example ~/Projects/eclipse/workspace/my_project
 
