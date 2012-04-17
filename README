@@ -9,6 +9,6 @@ Adding Simplified DateSlider to your project
 6. Import your R class in those files.
 
 How to use it?
-See DateSlider's original repo (https://github.com/bendemboski/DateSlider)
+See DateSlider's original repo at https://github.com/bendemboski/DateSlider.
 
 Note: DateSlider use custom attribute as defined in attrs.xml. However, I could not get the original version working according to this issue (http://stackoverflow.com/questions/2695646/declaring-a-custom-android-ui-element-using-xml), so I fixed it.
